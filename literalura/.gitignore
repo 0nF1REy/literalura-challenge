@@ -1,0 +1,78 @@
+# =============================
+# IDEs and configuration files
+# =============================
+nbproject/private/
+nbproject/genfiles.properties
+nbproject/build-impl.xml
+nbproject/
+dist/
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+.vscode/
+
+.classpath
+.project
+.settings/
+
+# =============================
+# Build and generated directories
+# =============================
+build/
+target/
+out/
+**/out/
+bin/
+
+# =============================
+# Compiled and packaged files
+# =============================
+*.class
+manifest.mf
+*.war
+*.ear
+*.jar
+!libs/dependencies/gson/gson-2.13.2.jar
+
+# =============================
+# Dependencies
+# =============================
+.m2/
+.gradle/
+
+# =============================
+# Temporary files and logs
+# =============================
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# =============================
+# System files
+# =============================
+.DS_Store
+Thumbs.db
+
+# =============================
+# Test output
+# =============================
+test-output/
+reports/
+
+# =============================
+# Environment variables
+# =============================
+.env
+
+# =============================
+# Large external libraries
+# =============================
+apache-activemq-5.18.3/
+javafx-sdk-25/
+mpj-v0_44/
