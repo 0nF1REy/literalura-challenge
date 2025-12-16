@@ -8,7 +8,6 @@ import br.com.alanryan.literalura.service.ConverteDados;
 import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
-import java.util.Optional;
 import java.util.List;
 
 @Component
@@ -62,7 +61,9 @@ public class Principal {
         var dados = conversor.obterDados(json, DadosGutendex.class);
 
         if (dados.resultados() != null && !dados.resultados().isEmpty()) {
-            DadosLivro dadosLivro = dados.resultados().get(0); // Pega o primeiro resultado
+
+            // Pega o primeiro resultado
+            DadosLivro dadosLivro = dados.resultados().get(0);
 
             // Verifica se o autor já existe no banco
             DadosAutor dadosAutor = dadosLivro.autores().get(0);
@@ -71,7 +72,8 @@ public class Principal {
 
             // Salva o livro
             Livro livro = new Livro(dadosLivro, autor);
-            // Verifica duplicidade de livro antes de salvar (opcional, mas recomendado)
+
+            // Verifica duplicidade de livro antes de salvar
             try {
                 livroRepository.save(livro);
                 System.out.println("Livro salvo: " + livro);
