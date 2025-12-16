@@ -1,8 +1,6 @@
 package br.com.alanryan.literalura;
 
 import br.com.alanryan.literalura.principal.Principal;
-import br.com.alanryan.literalura.repository.AutorRepository;
-import br.com.alanryan.literalura.repository.LivroRepository;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -13,10 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class LiteraluraApplication implements CommandLineRunner {
 
 	@Autowired
-	private LivroRepository livroRepository;
-
-	@Autowired
-	private AutorRepository autorRepository;
+	private Principal principal;
 
 	public static void main(String[] args) {
 		Dotenv dotenv = Dotenv.load();
@@ -26,7 +21,6 @@ public class LiteraluraApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Principal principal = new Principal(livroRepository, autorRepository);
 		principal.exibeMenu();
 	}
 }

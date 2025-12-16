@@ -5,11 +5,13 @@ import br.com.alanryan.literalura.repository.AutorRepository;
 import br.com.alanryan.literalura.repository.LivroRepository;
 import br.com.alanryan.literalura.service.ConsumoApi;
 import br.com.alanryan.literalura.service.ConverteDados;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 import java.util.Optional;
 import java.util.List;
 
+@Component
 public class Principal {
 
     private Scanner leitura = new Scanner(System.in);
@@ -17,8 +19,8 @@ public class Principal {
     private ConverteDados conversor = new ConverteDados();
     private final String ENDERECO = "https://gutendex.com/books/?search=";
 
-    private LivroRepository livroRepository;
-    private AutorRepository autorRepository;
+    private final LivroRepository livroRepository;
+    private final AutorRepository autorRepository;
 
     public Principal(LivroRepository livroRepository, AutorRepository autorRepository) {
         this.livroRepository = livroRepository;
