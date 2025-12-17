@@ -11,6 +11,8 @@
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4.0.0-green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18.1-blue)
 
+<img src="./resources/images/docs/badge-literalura.png" height="200" alt="Badge: LiterAlura">
+
 </div>
 
 ## 📖 Sobre o Projeto
