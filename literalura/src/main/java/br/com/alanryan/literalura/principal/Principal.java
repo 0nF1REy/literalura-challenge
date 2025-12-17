@@ -35,12 +35,21 @@ public class Principal {
                     3 - Listar autores registrados
                     4 - Listar autores vivos em um determinado ano
                     5 - Listar livros em um determinado idioma
+                    
                     0 - Sair
                     """;
 
             System.out.println(menu);
-            opcao = leitura.nextInt();
-            leitura.nextLine();
+
+            try {
+                opcao = leitura.nextInt();
+                leitura.nextLine();
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Opção inválida! Por favor, digite um número inteiro.");
+                leitura.nextLine();
+                opcao = -1;
+                continue;
+            }
 
             switch (opcao) {
                 case 1 -> buscarLivroWeb();
